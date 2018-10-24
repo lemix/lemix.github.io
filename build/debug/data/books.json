@@ -1,0 +1,22 @@
+[
+    { "label": "Краткая история почти ничего.</a> Эта книга — недоразуменье.", "src": "data/images/books/book1.png" },
+    { "label": "Все знания о вселенной</a> компактно упакованы на одной странице.", "src": "data/images/books/book2.png" },
+    { "label": "Автор подробно, всего двумя фразами, <a href=\"#\">объясняет все</a>.", "src": "data/images/books/book3.png" },
+    { "label": "Двоичные <a href=\"#\">размышления о жизни после пресса</a>.", "src": "data/images/books/book4.png" },
+    { "label": "Прозрачные тексты на мутные темы.", "src": "data/images/books/book5.png" },
+    { "label": "О чем спросить первого встречного мутанта с другой планеты. Руководство по умиранию.", "src": "data/images/books/book6.png" },
+    { "label": "Технические чертежи и детали самого лучшего робота на свете.", "src": "data/images/books/book7.png" },
+    { "label": "Коротко и ясно. Кому не ясно — Люрр объяснит. Коротко.", "src": "data/images/books/book8.png" },
+    { "label": "Краткая история почти ничего.</a> Эта книга — недоразуменье.", "src": "data/images/books/book1.png" },
+    { "label": "Все знания о вселенной</a> компактно упакованы на одной странице.", "src": "data/images/books/book2.png" },
+    { "label": "Автор подробно, всего двумя фразами, <a href=\"#\">объясняет все</a>.", "src": "data/images/books/book3.png" },
+    { "label": "Двоичные <a href=\"#\">размышления о жизни после пресса</a>.", "src": "data/images/books/book4.png" },
+    { "label": "Прозрачные тексты на мутные темы.", "src": "data/images/books/book5.png" },
+    { "label": "О чем спросить первого встречного мутанта с другой планеты. Руководство по умиранию.", "src": "data/images/books/book6.png" },
+    { "label": "Технические чертежи и детали самого лучшего робота на свете.", "src": "data/images/books/book7.png" },
+    { "label": "Коротко и ясно. Кому не ясно — Люрр объяснит. Коротко.", "src": "data/images/books/book8.png" },
+    { "label": "Прозрачные тексты на мутные темы.", "src": "data/images/books/book5.png" },
+    { "label": "О чем спросить первого встречного мутанта с другой планеты. Руководство по умиранию.", "src": "data/images/books/book6.png" },
+    { "label": "Технические чертежи и детали самого лучшего робота на свете.", "src": "data/images/books/book7.png" },
+    { "label": "Коротко и ясно. Кому не ясно — Люрр объяснит. Коротко.", "src": "data/images/books/book8.png" }
+]

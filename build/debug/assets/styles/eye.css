@@ -1,0 +1,61 @@
+.eye {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eye span {
+  display: block;
+  z-index: 3;
+  width: 26px;
+  height: 26px;
+  background: #000;
+  border-radius: 13px;
+  position: relative;
+}
+.eye::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: solid 4px #000;
+}
+.eye::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background: #fff;
+  transform: rotateX(0deg);
+}
+.eye.blink::after {
+  animation-name: eye-close;
+  animation-duration: 1s;
+}
+@keyframes eye-close {
+  0% {
+    transform: rotateX(0deg);
+    width: 142px;
+    left: 0;
+  }
+  50% {
+    transform: rotateX(90deg);
+    width: 120%;
+    left: -10%;
+  }
+}

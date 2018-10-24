@@ -1,0 +1,93 @@
+<section class="book-list" ng-controller="bookListController">
+    <h1>Самое незаметное издательство</h1>
+    <p class="title-note">Перетаскивайте книги ниже с места на место. Это то, чем мы любим больше всего заниматься. Попробуйте, вам
+        понравится.</p>
+    <!-- 8 книг в разметке - я полагаю логочино использовать пререндер, например, для SEO.
+    Блок будет скрыт после формирования объекта данных о книгах директивой parse-books -->
+    <div class="row" parse-books="onBookParsed($data)" ng-if="!parsed">
+        <!-- Book 1 -->
+        <article class="item ribbon ribbon-green">
+            <div class="image">
+                <img src="data/images/books/book1.png">
+            </div>
+            <div class="note">
+                <a href="#">Краткая история почти ничего.</a> Эта книга — недоразуменье.
+            </div>
+        </article>
+        <!-- Book 2 -->
+        <article class="item">
+            <div class="image">
+                <img src="data/images/books/book2.png">
+            </div>
+            <div class="note">
+                <a href="#">Все знания о вселенной</a> компактно упакованы на одной странице.
+            </div>
+        </article>
+        <!-- Book 3 -->
+        <article class="item ribbon ribbon-gray">
+            <div class="image">
+                <img src="data/images/books/book3.png">
+            </div>
+            <div class="note">
+                Автор подробно, всего двумя фразами, <a href="#">объясняет все</a>.
+            </div>
+        </article>
+        <!-- Book 4-->
+        <article class="item ribbon ribbon-red">
+            <div class="image">
+                <img src="data/images/books/book4.png">
+            </div>
+            <div class="note">
+                Двоичные <a href="#">размышления о жизни после пресса</a>.
+            </div>
+        </article>
+        <!-- Book 5 -->
+        <article class="item ribbon ribbon-gray">
+            <div class="image">
+                <img src="data/images/books/book5.png">
+            </div>
+            <div class="note">
+                Прозрачные тексты на мутные темы.
+            </div>
+        </article>
+        <!-- Book 6 -->
+        <article class="item ribbon ribbon-green">
+            <div class="image">
+                <img src="data/images/books/book6.png">
+            </div>
+            <div class="note">
+                О чем спросить первого встречного мутанта с другой планеты. Руководство по умиранию.
+            </div>
+        </article>
+        <!-- Book 7 -->
+        <article class="item ribbon ribbon-gray">
+            <div class="image">
+                <img src="data/images/books/book7.png">
+            </div>
+            <div class="note">
+                Технические чертежи и детали самого лучшего робота на свете.
+            </div>
+        </article>
+        <!-- Book 8 -->
+        <article class="item ribbon ribbon-red">
+            <div class="image">
+                <img src="data/images/books/book8.png">
+            </div>
+            <div class="note">
+                Коротко и ясно. Кому не ясно — Люрр объяснит. Коротко.
+            </div>
+        </article>
+    </div>
+    <!-- Динамически сформированный список книг -->
+    <div class="row" drag-and-drop="onDragComplete($newIndex, $oldIndex)" drag-and-drop-opts="dndOptions" ng-if="parsed">
+            <article class="item {{ item.class }}" ng-class="{'last': $index == books.length - 1}" ng-repeat="item in books track by $index">
+                <div class="image">
+                    <img ng-src="{{item.src}}">
+                </div>
+                <div class="note" ng-bind-html="item.label"></div>
+            </article>
+    </div>
+    <div class="row controls">
+        <button id="loadMore" ng-click="onLoadMoreClick()">Еще несколько книг</button>
+    </div>
+</section>

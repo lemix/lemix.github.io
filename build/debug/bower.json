@@ -1,0 +1,15 @@
+{
+  "name": "intergalactic-shop",
+  "authors": [
+    "Алексей Михайлов <aleksey.mikhaylov@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.7.5",
+    "normalize.css": "^8.0.0",
+    "angular-sanitize": "1.7.5"
+  }
+}

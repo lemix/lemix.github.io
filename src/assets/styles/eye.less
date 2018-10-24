@@ -1,0 +1,71 @@
+@eye-size: 142px;
+@eye-apple-size: 26px;
+@eye-border: 4px;
+
+.eye {
+    width: @eye-size;
+    height: @eye-size;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span { // Зрачок
+        display: block;
+        z-index: 3;
+        width: @eye-apple-size;
+        height: @eye-apple-size;
+        background: #000;
+        border-radius: 13px;
+        position: relative;
+    }
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: solid @eye-border #000;
+    }
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        background: #fff;
+        transform: rotateX(0deg);
+    }
+    
+    &.blink {
+        &::after {
+            animation-name: eye-close;
+            animation-duration: 1s;
+        }
+    }
+}
+
+@keyframes eye-close {
+    0% { 
+        transform: rotateX(0deg); 
+        width: @eye-size;
+        left: 0;
+    }
+    50% { 
+        transform: rotateX(90deg);
+        width: 120%;
+        left: -10%;
+    }
+}

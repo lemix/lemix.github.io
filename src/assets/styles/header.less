@@ -1,0 +1,88 @@
+@import "define.less";
+header {
+    padding: 60px 80px;
+    height: 156px;
+    .logo {
+        width: 300px;
+        height: 36px;
+        background: url('../images/logo.png') no-repeat;
+        float: left;
+        margin-left: 3px;
+    }
+    .search {
+        width: 314px;
+        float: right;
+        margin-right: -27px;
+        margin-top: 3px;
+        div {
+            margin-right: 34px;
+            input[type="text"] {
+                height: 30px;
+                line-height: 30px;
+                box-sizing: border-box;
+                border-radius: 15px;
+                border: solid 1px #b3b3b3;
+                width: 100%;
+                padding: 0 12px 0 33px;
+                font-size: 14px;
+                background: url('../images/search.png') no-repeat 7px center;
+                box-shadow: 0 2px 2px rgba(212, 212, 212, .5) inset;
+                &::placeholder {
+                    color: #979797;
+                    font-family: Verdana, sans-serif; // Verdana оказалась ближе всего к макету, в макете шрифт растрирован
+                    font-weight: normal;
+                    letter-spacing: -0.5px;
+                    line-height: 27px;
+                }
+            }
+        }
+        button {
+            float: right;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: url('../images/enter.png') no-repeat 6px center;
+            cursor: pointer;
+        }
+    }
+}
+@media @sm {
+    header {
+        padding: 40px 10px;
+        height: 186px;
+        .logo {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+        .search {
+            width: 300px;
+            float: none;
+            margin-right: 0;
+            margin-top: 0;
+        }
+    }
+}
+@media @lg {
+    header {
+        .search {
+            width: 250px;
+        }
+    }
+}
+@media @md {
+    header {
+        padding: 40px 0;
+        height: 186px;
+        .logo {
+            width: 100%;
+            background-position: center center;
+        }
+        .search {
+            width: 80%;
+            float: none;
+            margin-right: 8%;
+            margin-left: 12%;
+            margin-top: 60px;
+        }
+    }
+}

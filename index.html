@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Фрай, без штанов и Бендер</title>
+        <link href="vendors/normalize.css/normalize.css" rel="stylesheet">
+        <!-- build:css -->
+        <link href="assets/styles/main.css" rel="stylesheet">
+        <link href="assets/styles/header.css" rel="stylesheet">
+        <link href="assets/styles/eye.css" rel="stylesheet">
+        <link href="assets/styles/book/info.css" rel="stylesheet">
+        <link href="assets/styles/book/list.css" rel="stylesheet">
+        <link href="assets/styles/about.css" rel="stylesheet">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="IntergalacticApp" ng-controller="mainController">
+        <main>
+            @@include('./src/app/views/header.html')
+            @@include('./src/app/views/book/info.html')
+            @@include('./src/app/views/book/list.html')
+            @@include('./src/app/views/about.html')
+            @@include('./src/app/views/footer.html')
+        </main>
+
+        <!-- build:js -->
+        <script src="vendors/angular/angular.js"></script>
+        <script src="vendors/angular-sanitize/angular-sanitize.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/services/models/book.js"></script>
+        <script src="app/directives/search.js"></script>
+        <script src="app/directives/eye.js"></script>
+        <script src="app/directives/drag.js"></script>
+        <script src="app/controllers/main.js"></script>
+        <script src="app/controllers/header.js"></script>
+        <script src="app/controllers/footer.js"></script>
+        <script src="app/controllers/book/list.js"></script>
+        <script src="app/controllers/book/info.js"></script>
+        <script src="app/controllers/book/buy.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
